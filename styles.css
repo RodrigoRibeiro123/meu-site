@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fundo */
+body {
+    font-family: Arial, sans-serif;
+    background: #D2B48C url('https://www.w3schools.com/w3images/pond.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens com espaço entre eles */
+    align-items: center; /* Alinha verticalmente os itens */
+    padding: 20px 50px;
+    background-color: #a7793e;
+    color: white;
+    border-bottom: 5px solid  #D2B48C;
+}
+
+header .logo {
+    width: 60px; /* Ajuste o tamanho do logótipo conforme necessário */
+    height: auto;
+    margin-right: -40px;
+}
+
+header .header-content {
+    flex-grow: 1; /* Faz o conteúdo (texto) crescer e ocupar o espaço disponível */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+header .header-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header .header-content p {
+    font-size: 1.5em;
+}
+
+/* Conteúdo */
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contêiner de imagens para colocá-las lado a lado */
+.image-container {
+    margin-bottom: 40px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.responsive-img {
+    width: 48%; /* Ajusta a largura das imagens para que fiquem lado a lado */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.responsive-img1 {
+    width: 100%; /* A imagem ocupa toda a largura */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Efeito de zoom e sombra ao passar o mouse */
+.responsive-img:hover, 
+.responsive-img1:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da imagem */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra suave */
+}
+
+h2 {
+    text-align: center; /* Centraliza horizontalmente */
+    margin: 20px auto; /* Centraliza verticalmente, com espaço acima e abaixo */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 20px;
+    }
+
+    header .header-content h1 {
+        font-size: 2.5em;
+    }
+
+    header .header-content p {
+        font-size: 1.2em;
+    }
+
+    article h2 {
+        font-size: 1.8em;
+    }
+
+    article p {
+        font-size: 1em;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+
+    .responsive-img {
+        width: 100%; /* Em telas menores, as imagens ocupam toda a largura */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    header .header-content h1 {
+        font-size: 2em;
+    }
+
+    header .header-content p {
+        font-size: 1em;
+    }
+
+    article h2 {
+        font-size: 1.6em;
+    }
+
+    article p {
+        font-size: 0.9em;
+    }
+
+    ul li {
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    .responsive-img {
+        width: 100%; /* Em telas muito pequenas, as imagens ocupam toda a largura */
+    }
+}
