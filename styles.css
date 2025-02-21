@@ -25,25 +25,15 @@ header {
     border-bottom: 5px solid  #D2B48C;
 }
 
-header .logo {
-    width: 60px; /* Ajuste o tamanho do logótipo conforme necessário */
+.header-content{
+    margin-right: 50%;
+    transform: translateX(50%);
+}
+
+header .logo img {
+    width: 100%; /* A logo ocupa 100% do tamanho do seu contêiner */
+    max-width: 120px; /* Defina um limite máximo para a largura da logo */
     height: auto;
-    margin-right: -40px;
-}
-
-header .header-content {
-    flex-grow: 1; /* Faz o conteúdo (texto) crescer e ocupar o espaço disponível */
-    text-align: center; /* Centraliza o texto */
-}
-
-
-header .header-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-header .header-content p {
-    font-size: 1.5em;
 }
 
 /* Conteúdo */
@@ -112,6 +102,10 @@ footer {
         padding: 40px 20px;
     }
 
+    header .logo img {
+        max-width: 100px; /* Ajusta a logo para ser menor em telas menores */
+    }
+
     header .header-content h1 {
         font-size: 2.5em;
     }
@@ -144,6 +138,12 @@ footer {
 @media (max-width: 480px) {
     header {
         padding: 30px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .logo img {
+        max-width: 80px; /* Ajuste ainda menor para telas muito pequenas */
     }
 
     header .header-content h1 {
